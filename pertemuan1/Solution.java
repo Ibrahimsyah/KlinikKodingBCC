@@ -1,6 +1,8 @@
 package pertemuan1;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.Scanner;
 
 public class Solution {
@@ -65,6 +67,7 @@ public class Solution {
                     menu = in.nextInt();
                     in.nextLine();
                     if (menu == 1) {
+                        listBuku.sort(new Sorter());
                         System.out.println("List buku:");
                         for (int i = 0; i < listBuku.size(); ++i) {
                             Buku buku = listBuku.get(i);
@@ -88,4 +91,16 @@ public class Solution {
             }
         }
     }
+    
+}
+
+
+// Custom class untuk menangani sorting object dalam arraylist
+class Sorter implements Comparator<Buku>{
+
+    @Override
+    public int compare(Buku o1, Buku o2) {
+      return o1.getJudul().compareTo(o2.getJudul());
+    }
+    
 }
