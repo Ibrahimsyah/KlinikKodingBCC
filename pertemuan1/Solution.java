@@ -40,6 +40,7 @@ public class Solution {
                         String genre = in.nextLine();
                         Buku newBuku = new Buku(judul, stok, penulis, genre);
                         listBuku.add(newBuku);
+                        listBuku.sort(new Sorter());
                         System.out.println("  Sukses menambah buku");
                     } else if (menu == 2) {
                         System.out.println("Total Pengunjung: " + listPengunjung.size());
@@ -67,7 +68,6 @@ public class Solution {
                     menu = in.nextInt();
                     in.nextLine();
                     if (menu == 1) {
-                        listBuku.sort(new Sorter());
                         System.out.println("List buku:");
                         for (int i = 0; i < listBuku.size(); ++i) {
                             Buku buku = listBuku.get(i);
@@ -83,7 +83,7 @@ public class Solution {
                         if (akanDipinjam != null) {
                             newPengunjung.tambahPinjaman(listBuku.get(idBuku));
                             System.out.println("Sukses meminjam buku");
-                        }else{
+                        } else {
                             System.out.println("Buku tidak ada");
                         }
                     }
@@ -91,16 +91,15 @@ public class Solution {
             }
         }
     }
-    
+
 }
 
-
 // Custom class untuk menangani sorting object dalam arraylist
-class Sorter implements Comparator<Buku>{
+class Sorter implements Comparator<Buku> {
 
     @Override
     public int compare(Buku o1, Buku o2) {
-      return o1.getJudul().compareTo(o2.getJudul());
+        return o1.getJudul().compareTo(o2.getJudul());
     }
-    
+
 }
