@@ -1,5 +1,5 @@
 
-package klinikkodingbcc2021;
+package pertemuan1;
 
 import java.util.ArrayList;
 

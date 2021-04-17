@@ -1,4 +1,4 @@
-package klinikkodingbcc2021;
+package pertemuan1;
 
 /**
  *
