@@ -10,9 +10,7 @@ package pertemuan3;
  * @author Ibrahimsyah
  */
 interface Robot {
-
     void bergerak();
-
     void tembak();
 }
 
