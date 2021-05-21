@@ -10,5 +10,8 @@ package pertemuan3;
  * @author Ibrahimsyah
  */
 public class ExeceptionPlayground {
-    
+
+    public static void main(String[] args) {
+      
+    }
 }
